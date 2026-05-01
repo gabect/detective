@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evidence Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Evidence Board</h1>
+    <p class="subtitle">Record your findings and final conclusion</p>
+  </header>
+  <main class="container">
+    <nav class="crumbs"><a href="index.html">← Back to Case File</a></nav>
+
+    <section class="panel form-panel">
+      <label for="happened">What happened?</label>
+      <textarea id="happened" data-save="happened"></textarea>
+
+      <label for="wrong">What went wrong?</label>
+      <textarea id="wrong" data-save="wrong"></textarea>
+
+      <label for="evidence">Evidence / clues</label>
+      <textarea id="evidence" data-save="evidence"></textarea>
+
+      <label for="should">What should Jordan have done?</label>
+      <textarea id="should" data-save="should"></textarea>
+
+      <label for="conclusion">Final conclusion</label>
+      <textarea id="conclusion" data-save="conclusion"></textarea>
+
+      <button id="printBtn" type="button">Print Notes</button>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Fictional classroom worksheet</p>
+    <p class="tiny-link"><a href="teacher-notes.html">Teacher Notes</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
