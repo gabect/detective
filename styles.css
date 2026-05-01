@@ -1,0 +1,104 @@
+:root {
+  --bg: #0f1b2d;
+  --panel: #1c2b40;
+  --panel-2: #263b58;
+  --text: #e9f1ff;
+  --muted: #b7c9e6;
+  --accent: #7cc2ff;
+  --warn: #ffce73;
+  --danger: #ff9a9a;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+.site-header, .site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0b1525;
+}
+.subtitle { color: var(--muted); }
+.container {
+  max-width: 980px;
+  margin: 1rem auto;
+  padding: 0 1rem 2rem;
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid #334e72;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.highlight { background: var(--panel-2); }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+.card {
+  display: block;
+  background: #15263d;
+  border: 1px solid #36557f;
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+.card:hover { border-color: var(--accent); }
+.crumbs a, a { color: var(--accent); }
+.post, .email-item, .result {
+  border: 1px solid #395578;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  background: #17253a;
+}
+.meta { color: var(--muted); font-size: 0.95rem; }
+.comments { border-top: 1px solid #2e4668; margin-top: 0.5rem; padding-top: 0.5rem; }
+.suspicious { border-color: var(--warn); }
+.trusted, .important { border-color: #7dd3a0; }
+.messages { display: flex; flex-direction: column; gap: 0.6rem; }
+.bubble {
+  max-width: 75%;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+.from { background: #2c415f; align-self: flex-start; }
+.to { background: #3c5f88; align-self: flex-end; }
+.form-panel label { display: block; margin: 0.8rem 0 0.3rem; font-weight: 700; }
+textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #456893;
+  background: #0f1d32;
+  color: var(--text);
+  font-size: 1rem;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #10243d;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tiny-link { font-size: 0.78rem; opacity: 0.8; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #466994; padding: 0.5rem; text-align: left; }
+
+@media (max-width: 700px) {
+  body { font-size: 18px; }
+  .bubble { max-width: 92%; }
+}
